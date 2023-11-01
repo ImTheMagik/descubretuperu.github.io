@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">
+            <img src="https://www.unfv.edu.pe/images/logo_unfv.jpg">
+        </a>
+        <nav class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a target="_blank" href="https://jamiro16.github.io">Gastronomía</a></li>
+                <li><a target="_blank" href="https://hachirufo.github.io">Mitos y Leyendas</a></li>
+                <li><a target="_blank" href="mailto:sebastian_s_o@hotmail.com" href="#">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+    <section class="section-main">
+        <h1>Descubre a tu Perú</h1>
+    </section>
+
+    <!--   Tarjetas-->
+    <div class="title-cards">
+        <h2>¿Sabías que...</h2>
+    </div>
+    <div class="container-card">
+
+        <div class="card">
+            <figure>
+                <img
+                    src="https://especial.elcomercio.pe/perusostenible/wp-content/uploads/sites/78/2021/07/Peru-sostenible_ODS-Diversidad-cultural-Lenguas-originarias-interculturalidad_Redes-ANDINA-DIFUSION.jpg">
+            </figure>
+            <div class="contenido-card">
+                <h3>Idiomas Oficiales</h3>
+                <p>Además del español, el quechua y el aimara son idiomas oficiales en Perú. El quechua es hablado por
+                    muchas comunidades indígenas en el país.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img
+                    src="https://i0.wp.com/readytotravelperu.com/wp-content/uploads/2022/04/inca-pachacutec.jpg?resize=800%2C448&ssl=1">
+            </figure>
+            <div class="contenido-card">
+                <h3>Cultura Inca</h3>
+                <p>Los incas construyeron Machu Picchu, la famosa ciudad perdida en las montañas. Esta antigua ciudadela
+                    es uno de los destinos turísticos más populares del mundo.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="https://tikatours.pe/wp-content/uploads/2019/05/aves-del-peru.jpg">
+            </figure>
+            <div class="contenido-card">
+                <h3>Biodiversidad</h3>
+                <p>Perú es uno de los países más biodiversos del mundo. Alberga una gran variedad de ecosistemas, desde
+                    la selva amazónica hasta el desierto costero.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //javascript para el scroll de la barra
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle('down', window.scrollY > 0);
+
+            //cambiar el logo
+            var logo = document.querySelector(".brand img");
+            if (window.scrollY > 0) {
+                logo.setAttribute('src', 'https://www.unfv.edu.pe/images/logo_unfv.jpg');
+            } else {
+                logo.setAttribute('src', 'https://www.unfv.edu.pe/images/logo_unfv.jpg');
+            }
+
+        });
+
+        //javascript para la barra responsiva
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+
+        closeBtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+    </script>
+    <footer>
+        <section>
+            <a href="#">Ir al comienzo</a>
+        </section>
+        <p>Copyright 2023</p>
+    </footer>
+</body>
+
+</html>
